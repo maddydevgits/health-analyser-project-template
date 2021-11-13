@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='log.css')}}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Login</div>
+    <div class="content">
+      <form action="/login" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">UserName</span>
+			
+            <input type="text" name="userid" class="form-control" placeholder="Enter your username" required>
+          </div>
+          <br>       
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="pwd" class="form-control" placeholder="Enter your Password" required>
+          </div>
+        
+        </div> 
+        <div class="button">
+          <input type="reset" value="Clear">
+          <input type="submit" name="login" value="Login" class="boat">
+		  <span style="color: red">{{err_log}} </span> <br/> <br/>
+        </div>
+		
+      </form>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='out.css')}}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Patient Report</div>
+    <div class="content">
+      <form>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name: </span>
+				<span style="color:red">{{ fname }}</span>
+          </div>
+          <br>       
+          <div class="input-box">
+            <span class="details">Adhaar Number: </span>
+				<span style="color:red">{{ adhaar }}</span>
+          </div>
+        
+          <div class="input-box">
+            <span class="details">District: </span>
+					<span style="color:red">{{ district }}</span>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Village Name: </span>
+					<span style="color:red">{{ village }}</span>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Phone Number: </span>
+					<span style="color:red">{{ phone }}</span>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Age: </span>
+					<span style="color:red">{{ age }}</span>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Gender: </span>
+					<span style="color:red">{{ gender }}</span>
+          </div>
+
+          <div class="title1">
+			<span class="details"> Disease Details </span> <br/>
+		  		<span style="color:red">{{ disease_details }}</span>
+		  </div>
+			
+          <div class="title2">
+		  <span class="details"> Prescribed Medicines </span> <br/>
+				<span style="color:red"> {{ medicines }} </span>
+		  </div>
+        </div> 
+        <div class="button">
+          <input type="button" value="Save" onclick="window.print()" class="car">
+        </div>
+      </form>
+    </div>
+    </div>
+</body>
+</html>
